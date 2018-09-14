@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html>
+<head>
+
+	<title>NITK COOPERATIVE SOCIETY | ONLINE DELIVERY</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" initial-scale="1.0">
+	<meta name="description" content="online coop service nitk">
+	<meta name="keywords" content="nitk online coop">
+ 
+	<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Suez+One">
+	<link rel="stylesheet" href="/assets/css/flexslider.css" type="text/css">
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<main>
+		
+		<div class="pen-title">
+			<h1>Nodejs Facebook Auth</h1><span>Made <i class='fa fa-code'></i> by <a href='https://github.com/vansjyo'>#vansjyo</a></span>
+		</div>
+		<div class="container">
+
+			<div class="row center">
+
+
+				<h4>Your Profile Info<br></h4>
+				<div class="row coll">
+					ID : <%= user.facebook.id %><br>
+					Username : <%= user.facebook.name %><br>
+					<% var a="https://graph.facebook.com/" + user.facebook.id + "/picture?type=normal"  %>
+					<img src="<%= a %>">
+				</div>
+				<a href="/logout" class="waves-effect waves-light btn-large getstart">
+						Logout
+					</a>
+
+
+			</div>
+		</div>
+
+
+
+	</main>
+
+
+
+	<!-- footer -->
+	<% include partials/footer.ejs %>
+	<!-- ////footer -->
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
+	<script src="/assets/js/jquery.flexslider.js"></script>
+	<script src="/assets/js/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</body>
+</html>
