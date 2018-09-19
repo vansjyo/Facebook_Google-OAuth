@@ -13,6 +13,8 @@ module.exports = function(app, passport){
 	
 
 	app.get('/home', isLoggedIn, function(req, res){
+		console.log("hey its the user here");
+		console.log(req.user);
 		res.render('home.ejs', { user: req.user });
 	});
  

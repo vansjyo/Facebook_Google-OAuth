@@ -2,13 +2,13 @@
 <html>
 <head>
 
-	<title>NITK COOPERATIVE SOCIETY | ONLINE DELIVERY</title>
+	<title>Facebook OAuth | Node.js</title>
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width" initial-scale="1.0">
 	<meta name="description" content="online coop service nitk">
 	<meta name="keywords" content="nitk online coop">
- 
+
 	<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
@@ -34,34 +34,38 @@
 
 				<h4>Your Profile Info<br></h4>
 				<div class="row coll">
-					ID : <%= user.facebook.id %><br>
-					Username : <%= user.facebook.name %><br>
+					ID : <%= user.facebook.id %><%= user.google.id %><br>
+					Username : <%= user.facebook.name %><%= user.google.name %><br>
 					<% var a="https://graph.facebook.com/" + user.facebook.id + "/picture?type=normal"  %>
-					<img src="<%= a %>">
-				</div>
-				<a href="/logout" class="waves-effect waves-light btn-large getstart">
-						Logout
-					</a>
-
-
+					<% if( user.facebook.id == undefined ){ %>
+					<img src="<%= user.google.photo %>">
+				<% } else{ %>
+				<img src="<%=a %>"> 
+				<% } %> 
 			</div>
+			<a href="/logout" class="waves-effect waves-light btn-large getstart">
+				Logout
+			</a>
+
+
 		</div>
+	</div>
 
 
 
-	</main>
+</main>
 
 
 
-	<!-- footer -->
-	<% include partials/footer.ejs %>
-	<!-- ////footer -->
+<!-- footer -->
+<% include partials/footer.ejs %>
+<!-- ////footer -->
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
-	<script src="/assets/js/jquery.flexslider.js"></script>
-	<script src="/assets/js/main.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
+<script src="/assets/js/jquery.flexslider.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
 </body>
 </html>
