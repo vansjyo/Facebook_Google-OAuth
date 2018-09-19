@@ -127,6 +127,7 @@ module.exports = function(passport) {
 					newUser.google.id = profile.id;
 					newUser.google.token= accessToken;
 					newUser.google.name = profile.displayName;
+					newUser.google.photo = profile.photos[0].value;
 
 					newUser.save(function(err){
 						if(err)
