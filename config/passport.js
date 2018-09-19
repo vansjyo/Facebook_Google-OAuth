@@ -72,9 +72,9 @@ module.exports = function(passport) {
 	
 
 	passport.use(new FacebookStrategy({
-		clientID: '***************',
+		clientID: '867585810067431',
 		enableProof:true,
-		clientSecret: '********************************', 
+		clientSecret: 'a1b9abae31dd8fe7e5a998ffd21c1091', 
 		callbackURL: 'http://localhost:8080/auth/facebook/callback',
 		profileFields: ['id', 'name','photos', 'displayName'], 
 
@@ -107,9 +107,9 @@ module.exports = function(passport) {
 
 
 	passport.use(new GoogleStrategy({
-		clientID: '**************************************************',
+		clientID: '493371055009-gta7u0jtsj60im9fod7j2n6dhn2rno4s.apps.googleusercontent.com',
 		enableProof:true,
-		clientSecret: '*************************', 
+		clientSecret: 'gkdqXsu8kXt-tN1ttodFq16v', 
 		callbackURL: 'http://localhost:8080/auth/google/callback',
 	 
 
