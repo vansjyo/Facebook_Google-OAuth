@@ -1,3 +1,3 @@
-# Facebook-OAuth
+# Facebook & Google -OAuth
 
-Login using facebook account
+Login using facebook or Google account
