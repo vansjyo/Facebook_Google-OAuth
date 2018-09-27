@@ -27,18 +27,7 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
-
-
-
 app.set('view engine', 'ejs');
-
-
-// app.use('/', function(req, res){
-// 	res.send('Our First Express program!');
-// 	console.log(req.cookies);
-// 	console.log('================');
-// 	console.log(req.session);
-// });
 
 require('./app/routes.js')(app, passport);
 
